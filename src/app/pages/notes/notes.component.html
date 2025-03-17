@@ -1,8 +1,21 @@
-<app-header></app-header>
+<div class="notes-box">
+    <app-header></app-header>
+    <app-form-notes></app-form-notes>
 <section class="section-notes">
-    <div class="notes" *ngFor="let note of notesServices.notes, index as i">
+    <div class="notes" *ngFor="let note of notesServices.notes; index as i">
         <h3>{{i + 1}}</h3>
-        <input type="text" [value]="note.title">
-        <input type="checkbox" class="checkbox" [checked]="note.marked" >
+        <input 
+            type="text" 
+            [value]="note.title"
+            [id]="note.id"
+            (input)="updatedTitle(note.id, $event)">
+        <input 
+            type="checkbox" 
+            class="checkbox" 
+            [checked]="note.marked"
+            [id]="note.title" 
+            (change)="updatedMarked(note.id)">
+            <button (click)="noteDelete(note.id)">Borrar nota</button>
     </div>
 </section>
+</div>

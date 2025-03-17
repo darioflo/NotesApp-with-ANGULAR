@@ -1,0 +1,7 @@
+<form class="form" [formGroup]="formNote" (ngSubmit)="aggNote(formNote.value)">
+    <fieldset class="fieldset">
+        <label for="title" name="title">Nueva nota</label>
+        <input type="text" placeholder="Escriba su nota" formControlName="title" id="title" name="title">
+        <button type="submit">Agregar Nota</button>
+    </fieldset>
+</form>
