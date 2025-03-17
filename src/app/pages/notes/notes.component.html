@@ -1,0 +1,8 @@
+<app-header></app-header>
+<section class="section-notes">
+    <div class="notes" *ngFor="let note of notesServices.notes, index as i">
+        <h3>{{i + 1}}</h3>
+        <input type="text" [value]="note.title">
+        <input type="checkbox" class="checkbox" [checked]="note.marked" >
+    </div>
+</section>

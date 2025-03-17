@@ -1,0 +1,32 @@
+.section-notes{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.notes{
+    width: 15rem;
+    height: 10rem;
+    background-color:rgb(236, 82, 40);
+    color: rgb(239, 239, 239);
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+}
+input[type='checkbox']{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+input[type='checkbox']:checked{
+    accent-color: #3F7D58;
+}
